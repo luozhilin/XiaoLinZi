@@ -1,0 +1,36 @@
+//
+//  PrefixHeader.pch
+//  第一天
+//
+//  Created by 罗志林 on 15/9/28.
+//  Copyright © 2015年 luozhilin. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__ //  #ifdef __OBJC__ 和 #endif中的内容只会出现在OC源文件中
+
+#ifdef DEBUG // 开发调试阶段
+#define LZLLog(...) NSLog(__VA_ARGS__)
+#else // 打包发布阶段
+#define XMGLog(...)
+#endif
+
+#import "UIBarButtonItem+LZLExtends.h"
+#import "UIView+LZLExtends.h"
+
+#define LZLLogFuc LZLLog(@"%s", __func__);
+
+
+#define LZLColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0];
+#define LZLRandomColor LZLColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255));
+
+#define LZLGrayColor(v) LZLColor(v, v, v)
+
+#endif
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */

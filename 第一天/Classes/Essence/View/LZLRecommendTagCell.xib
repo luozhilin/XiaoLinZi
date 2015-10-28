@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="recommendTag" rowHeight="122" id="KGk-i7-Jjw" customClass="LZLRecommendTagCell">
+            <rect key="frame" x="0.0" y="0.0" width="332" height="122"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="332" height="121"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tnP-jU-EDr" userLabel="图片">
+                        <rect key="frame" x="13" y="36" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="B0g-m0-wSR"/>
+                            <constraint firstAttribute="height" constant="50" id="SJt-HX-FAS"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v29-ky-fl5" userLabel="名称">
+                        <rect key="frame" x="71" y="36" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPG-eh-7yp" userLabel="数量">
+                        <rect key="frame" x="71" y="68" width="38" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z32-Y4-Uez">
+                        <rect key="frame" x="261" y="48" width="51" height="25"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="+ 订阅" backgroundImage="FollowBtnBg">
+                            <color key="titleColor" red="0.99371603259999997" green="0.079632574750000004" blue="0.093178785809999998" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <state key="highlighted" backgroundImage="FollowBtnClickBg"/>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="tnP-jU-EDr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9ye-rq-k5r"/>
+                    <constraint firstItem="tPG-eh-7yp" firstAttribute="leading" secondItem="v29-ky-fl5" secondAttribute="leading" id="LB3-LP-5WA"/>
+                    <constraint firstItem="tnP-jU-EDr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="NYJ-LP-adi"/>
+                    <constraint firstItem="v29-ky-fl5" firstAttribute="leading" secondItem="tnP-jU-EDr" secondAttribute="trailing" constant="8" id="OZ0-T0-DBY"/>
+                    <constraint firstAttribute="trailing" secondItem="Z32-Y4-Uez" secondAttribute="trailing" constant="20" id="PKZ-Pa-YpV"/>
+                    <constraint firstItem="v29-ky-fl5" firstAttribute="top" secondItem="tnP-jU-EDr" secondAttribute="top" id="vht-w5-ynE"/>
+                    <constraint firstItem="tPG-eh-7yp" firstAttribute="bottom" secondItem="tnP-jU-EDr" secondAttribute="bottom" id="z9n-nv-O79"/>
+                    <constraint firstItem="Z32-Y4-Uez" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="zOy-Wd-1kK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imageListView" destination="tnP-jU-EDr" id="HcA-bD-ydZ"/>
+                <outlet property="subNumberLabel" destination="tPG-eh-7yp" id="xjG-tw-pum"/>
+                <outlet property="themeNameLabel" destination="v29-ky-fl5" id="8gS-A1-M0U"/>
+            </connections>
+            <point key="canvasLocation" x="222" y="153"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="FollowBtnBg" width="51" height="25"/>
+        <image name="FollowBtnClickBg" width="51" height="25"/>
+    </resources>
+</document>
